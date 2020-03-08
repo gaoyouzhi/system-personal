@@ -51,4 +51,12 @@ public class Student implements Serializable {
     public void setSerialNo(String serialNo) {
         this.serialNo = serialNo;
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }

@@ -12,10 +12,13 @@ import java.util.List;
 public class StudentServiceImpl implements StudentService {
 
     @Override
-    public List<Student> getStudentInfoByIds(List<Integer> ids) {
+    public List<Student> getStudentInfoByIds(Integer begin, Integer end) {
         List<Student> list = new ArrayList<>();
 
-        for (int i = 1; i < Integer.MAX_VALUE; i ++){
+        if(begin < 0 || end < 0 || begin < end) {
+            return list;
+        }
+        for (int i = begin; i < end; i ++){
             Student student = new Student();
             student.setId(i);
             student.setName("student" + i);

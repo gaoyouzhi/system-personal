@@ -1,9 +1,12 @@
 package com.ikang.test;
 
-import com.ikang.demo.ThreadPoll;
+import com.ikang.demo.FutureTaskDemo;
+import com.ikang.model.Student;
+import com.ikang.service.StudentService;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.Rollback;
 
@@ -18,16 +21,16 @@ import java.util.concurrent.Callable;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 @Rollback(false)
 public class ThreadsTest {
+
+    @Autowired
+    private StudentService studentService;
+
     @Test
     public void test(){
-        List<Callable<String>> callables = new ArrayList<>();
+        List<Callable<List<Student>>> callables = new ArrayList<>();
         for(int i=0;i<10;i++){
-            callables.add(()-> Math.random()+"");
+            callables.add(new FutureTaskDemo(i*1000, (i+1)*1000 - 1));
         }
-        List<String> res = ThreadPoll.addTask(callables);
-        System.out.println("**********************");
-        for(String str : res){
-            System.out.println(str);
-        }
+
     }
 }
