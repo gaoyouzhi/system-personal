@@ -9,10 +9,10 @@ import org.springframework.scheduling.annotation.EnableScheduling;
  * @author gaoyouzhi
  */
 @SpringBootApplication
-@EnableScheduling
 public class PersonalDemoApplication
 {
     public static void main( String[] args ) {
         SpringApplication.run(PersonalDemoApplication.class, args);
     }
+
 }

@@ -1,9 +1,5 @@
 package com.ikang.aop;
 
-import com.alibaba.fastjson.JSON;
-import com.ikang.model.Message;
-import com.ikang.util.AESUtil;
-import org.apache.commons.codec.digest.DigestUtils;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -45,19 +41,7 @@ public class EncryptionAuth {
         logger.info("实现方法: " + pjp.getSignature().getDeclaringTypeName() + "." + pjp.getSignature().getName());
 
         logger.info("参数 : " + Arrays.toString(pjp.getArgs()));
-        Message message = JSON.parseObject(JSON.toJSONString(pjp.getArgs()[0]), Message.class);
-
-        String signNew = DigestUtils.md5Hex(message.getMessage());
-
-        if(!signNew.equals("abc")){
-            return "fail";
-        }
-
-        String data = AESUtil.decrypt("1bs");
-        Object[] o = new Object[1];
-
-        o[0] = data;
-        return pjp.proceed(o);
+        return pjp.proceed();
     }
 
 
