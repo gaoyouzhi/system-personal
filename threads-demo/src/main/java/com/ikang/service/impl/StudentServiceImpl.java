@@ -19,6 +19,7 @@ public class StudentServiceImpl implements StudentService {
             Student student = new Student();
             student.setId(i);
             student.setName("student" + i);
+            list.add(student);
         }
         return list;
     }

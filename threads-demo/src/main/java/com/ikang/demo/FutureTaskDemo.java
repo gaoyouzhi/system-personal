@@ -1,5 +1,11 @@
 package com.ikang.demo;
 
+import com.ikang.model.Student;
+import com.sun.javafx.collections.MappingChange;
+import sun.nio.ch.ThreadPool;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.*;
 
 /**
@@ -9,10 +15,6 @@ import java.util.concurrent.*;
  */
 public class FutureTaskDemo {
 
-    public static void main(String[] args) {
-
-        ExecutorService executorService = new ThreadPoolExecutor(4, 4, 100, TimeUnit.MILLISECONDS, new ArrayBlockingQueue<Runnable>(10));
 
 
-    }
 }
