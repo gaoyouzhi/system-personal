@@ -7,7 +7,7 @@ import org.apache.rocketmq.remoting.common.RemotingHelper;
 
 /**
  * @description: 描述：RocketMQ测试类(单机模式)
- * @author: youzhi.gao@haochang.com
+ * @author: youzhi.gao
  * @date: 2020-03-11 09:37
  */
 public class RocketMQ {
@@ -19,7 +19,7 @@ public class RocketMQ {
      * @Description 描述：测试生产者
      * @Param
      * @Returns
-     * @Author: youzhi.gao@haochang.com
+     * @Author: youzhi.gao
      * @Date: 2020-03-11 9:38
      */
     private static void testProvider() throws Exception{

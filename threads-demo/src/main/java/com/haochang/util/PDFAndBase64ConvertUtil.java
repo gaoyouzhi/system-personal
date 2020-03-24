@@ -9,7 +9,7 @@ import java.io.*;
 
 /**
  * @description: 描述：base64 转PDF文件流
- * @author: youzhi.gao@haochang.com
+ * @author: youzhi.gao
  * @date: 2020-03-11 15:12
  */
 public class PDFAndBase64ConvertUtil {
