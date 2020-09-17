@@ -85,7 +85,7 @@ public class RestTemplateUtils {
      * @return ResponseEntity 响应对象封装类
      */
     public  <T> ResponseEntity<T> get(String url, HttpHeaders headers, Class<T> responseType, Object... uriVariables) {
-        HttpEntity<?> requestEntity = new HttpEntity<>(headers);
+        HttpEntity<?> requestEntity = new HttpEntity<T>(headers);
         return exchange(url, HttpMethod.GET, requestEntity, responseType, uriVariables);
     }
 
@@ -114,7 +114,7 @@ public class RestTemplateUtils {
      * @return ResponseEntity 响应对象封装类
      */
     public  <T> ResponseEntity<T> get(String url, HttpHeaders headers, Class<T> responseType, Map<String, ?> uriVariables) {
-        HttpEntity<?> requestEntity = new HttpEntity<>(headers);
+        HttpEntity<?> requestEntity = new HttpEntity<T>(headers);
         return exchange(url, HttpMethod.GET, requestEntity, responseType, uriVariables);
     }
 
