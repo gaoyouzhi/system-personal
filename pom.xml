@@ -4,7 +4,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.ikang</groupId>
+    <groupId>com.haochang</groupId>
     <artifactId>system-personal</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
@@ -13,8 +13,8 @@
         <module>base-demo</module>
         <module>threads-demo</module>
         <module>common</module>
-        <module>dubbo-consumer-demo</module>
-        <module>dubbo-nacos-api</module>
+        <module>lock</module>
+        <module>encryption-demo</module>
     </modules>
 
     <parent>
