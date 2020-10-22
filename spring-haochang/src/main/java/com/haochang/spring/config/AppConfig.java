@@ -5,6 +5,7 @@ import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.ComponentScans;
 import org.springframework.context.annotation.Configuration;
 
 /**
@@ -13,6 +14,7 @@ import org.springframework.context.annotation.Configuration;
  * @date: 2020-10-12 16:07
  */
 @Configuration
+@ComponentScan(value = "com.haochang.spring")
 public class AppConfig {
 
     /**

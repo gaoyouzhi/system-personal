@@ -7,6 +7,6 @@ import org.springframework.stereotype.Component;
  * @author: youzhi.gao
  * @date: 2020-10-12 16:11
  */
-@Component
+//@Component
 public class Person {
 }
