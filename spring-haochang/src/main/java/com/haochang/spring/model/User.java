@@ -1,13 +1,24 @@
 package com.haochang.spring.model;
 
+import com.haochang.spring.condition.WindowsCondition;
+import com.haochang.spring.service.impl.UserService;
+import org.springframework.context.annotation.Conditional;
+import org.springframework.context.annotation.Lazy;
+import org.springframework.context.annotation.Scope;
+
 /**
  * @description: 描述：用户类
  * @author: youzhi.gao
  * @date: 2020-10-12 16:10
  */
+@Scope("prototype")
+@Conditional({WindowsCondition.class})
 public class User {
     private String name;
     private int sex;
+
+    public User() {
+    }
 
     public User(String name) {
         this.name = name;
