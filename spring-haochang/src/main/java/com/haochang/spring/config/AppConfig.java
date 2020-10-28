@@ -1,6 +1,7 @@
 package com.haochang.spring.config;
 
 import com.haochang.spring.model.OrderEvent;
+import com.haochang.spring.service.impl.UserService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ApplicationListener;
@@ -15,6 +16,10 @@ import org.springframework.context.annotation.*;
 @ComponentScan(value = "com.haochang.spring")
 public class AppConfig {
 
+    @Bean
+    public UserService userService1(){
+        return new UserService();
+    }
     /**
      * 方法功能描述：注册事件监听
      * @MethodName: applicationListener

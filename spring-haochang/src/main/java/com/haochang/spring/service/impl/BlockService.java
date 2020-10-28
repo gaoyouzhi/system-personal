@@ -13,6 +13,6 @@ import org.springframework.stereotype.Service;
  * @author: youzhi.gao
  * @date: 2020-10-22 20:19
  */
-@Component("baseService")
+@Component()
 public class BlockService implements BaseService {
 }

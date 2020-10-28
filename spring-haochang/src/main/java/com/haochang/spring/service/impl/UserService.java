@@ -9,6 +9,5 @@ import org.springframework.stereotype.Component;
  * @date: 2020-10-21 14:08
  */
 @Component
-@Scope(value = "prototype")
 public class UserService {
 }

@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Scope;
  * @author: youzhi.gao
  * @date: 2020-10-12 16:10
  */
-@Scope("prototype")
+//@Scope("prototype")
 @Conditional({WindowsCondition.class})
 public class User {
     private String name;

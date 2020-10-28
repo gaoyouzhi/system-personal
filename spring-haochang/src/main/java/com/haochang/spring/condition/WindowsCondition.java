@@ -14,6 +14,7 @@ import org.springframework.core.type.AnnotatedTypeMetadata;
 public class WindowsCondition implements Condition {
     @Override
     public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata) {
+
         if(context.getEnvironment().getProperty("OS").equals("Windows_NT")){
             return true;
         }
