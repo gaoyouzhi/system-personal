@@ -1,6 +1,7 @@
 package com.haochang.spring.config;
 
 import com.haochang.spring.model.OrderEvent;
+import com.haochang.spring.model.User;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ApplicationListener;
@@ -17,24 +18,34 @@ public class AppConfig {
 
     /**
      * 方法功能描述：注册事件监听
-     * @MethodName: applicationListener
+     *
      * @param
+     * @MethodName: applicationListener
      * @Return: {@link ApplicationListener}
      * @Author: yz.gao
      * @Date: 2020-10-12 17:31
      */
     @Bean
-    public ApplicationListener applicationListener(){
+    public ApplicationListener applicationListener() {
         return new ApplicationListener() {
             @Override
             public void onApplicationEvent(ApplicationEvent event) {
-               if(event instanceof OrderEvent){
-                   System.out.println("收到事件" + event.toString() );
-               } else {
-                   System.out.println(event.getSource());
-               }
+                if (event instanceof OrderEvent) {
+                    System.out.println("收到事件" + event.toString());
+                } else {
+                    System.out.println(event.getSource());
+                }
             }
         };
     }
 
+    @Bean(name="user1")
+    public User user() {
+        return new User();
+    }
+
+    @Bean(name="user1")
+    public User user123() {
+        return new User();
+    }
 }
