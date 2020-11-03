@@ -14,7 +14,8 @@ public class ApplicationContextTest {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext annotationConfigApplicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
 
-        annotationConfigApplicationContext.registerBean("user", User.class);
+//        annotationConfigApplicationContext.registerBean("user", User.class);
+//        annotationConfigApplicationContext.registerAlias("user", "sss");
 //        BaseService baseService = annotationConfigApplicationContext.getBean("baseService", BaseService.class);
 //        UserService userService1 = annotationConfigApplicationContext.getBean("userService", UserService.class);
 //        UserService userService2 = annotationConfigApplicationContext.getBean("userService", UserService.class);
@@ -25,8 +26,9 @@ public class ApplicationContextTest {
 //        System.out.println(userService3);
 //        System.out.println(baseService);
 
-        User user = annotationConfigApplicationContext.getBean("user", User.class);
-        System.out.println(user);
+//        User sss = annotationConfigApplicationContext.getBean("sss", User.class);
+        BaseService bs = annotationConfigApplicationContext.getBean("blockService", BaseService.class);
+        System.out.println(bs);
 
     }
 }

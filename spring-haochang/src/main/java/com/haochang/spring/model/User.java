@@ -5,7 +5,6 @@ import com.haochang.spring.service.impl.UserService;
 import org.springframework.context.annotation.Conditional;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
 
 /**
  * @description: 描述：用户类
@@ -13,8 +12,7 @@ import org.springframework.stereotype.Component;
  * @date: 2020-10-12 16:10
  */
 //@Scope("prototype")
-//@Conditional({WindowsCondition.class})
-    @Component
+@Conditional({WindowsCondition.class})
 public class User {
     private String name;
     private int sex;
