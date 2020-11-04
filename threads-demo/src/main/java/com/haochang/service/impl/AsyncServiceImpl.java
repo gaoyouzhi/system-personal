@@ -9,12 +9,12 @@ import org.springframework.stereotype.Service;
 /**
  * @author Administrator
  */
-@Service
+//@Service
 public class AsyncServiceImpl implements AsyncService {
     private static final Log log = LogFactory.getLog(AsyncServiceImpl.class);
 
     @Override
-    @Async("asyncServiceExecutor")
+//    @Async("asyncServiceExecutor")
     public void executeAsync() {
         log.info("start executeAsync");
         try{

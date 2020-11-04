@@ -17,7 +17,7 @@ import java.util.Map;
  * @createDate 2019-11-26
  *
  */
-@Component
+//@Component
 public class RestTemplateUtils {
     @Resource
     private RestTemplate restTemplate;

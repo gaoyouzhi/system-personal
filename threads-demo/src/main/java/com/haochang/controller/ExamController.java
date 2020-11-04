@@ -12,7 +12,7 @@ import java.util.concurrent.LinkedBlockingDeque;
 /**
  * Created by gaoyouzhi on 2020/3/7.
  */
-@RestController
+//@RestController
 public class ExamController {
 
     private BlockingDeque blockingDeque = new LinkedBlockingDeque<>();

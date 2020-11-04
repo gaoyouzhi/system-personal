@@ -11,7 +11,7 @@ public class Student implements Serializable {
 
     private static final long serialVersionUID = 3592317091599396468L;
 
-    private Integer id;
+    private Long id;
 
     private String name;
 
@@ -20,11 +20,11 @@ public class Student implements Serializable {
     private String serialNo;
 
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

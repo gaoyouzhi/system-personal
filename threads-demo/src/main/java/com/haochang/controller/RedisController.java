@@ -5,10 +5,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 //@RestController
-@RequestMapping("/redis")
+//@RequestMapping("/redis")
 public class RedisController {
 
-    @Autowired
+//    @Autowired
     private RedisUtil redisUtil;
 
 

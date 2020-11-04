@@ -2,6 +2,7 @@ package com.haochang.service.impl;
 
 import com.haochang.model.Student;
 import com.haochang.service.StudentService;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,6 +10,7 @@ import java.util.List;
 /**
  * Created by gaoyouzhi on 2020/3/7.
  */
+@Service
 public class StudentServiceImpl implements StudentService {
 
     @Override
@@ -20,7 +22,7 @@ public class StudentServiceImpl implements StudentService {
         }
         for (int i = begin; i < end; i ++){
             Student student = new Student();
-            student.setId(i);
+            student.setId(new Long(i));
             student.setName("student" + i);
             list.add(student);
         }
@@ -28,7 +30,7 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public Student getStudentInfoById(Integer id) {
+    public Student getStudentInfoById(Long id) {
         Student student = new Student();
         student.setId(id);
         student.setName("stu-" + id);

@@ -12,5 +12,5 @@ import java.util.List;
 public interface StudentService {
     List<Student> getStudentInfoByIds(Integer begin, Integer end);
 
-    Student getStudentInfoById(Integer id);
+    Student getStudentInfoById(Long id);
 }
