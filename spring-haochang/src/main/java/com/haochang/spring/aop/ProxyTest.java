@@ -21,7 +21,9 @@ public class ProxyTest {
 //        System.out.println(house.toString());
 
         HouseService houseService = new HouseService();
-        ProxyInterface result = (ProxyInterface) Proxy.newProxyInstance(HouseService.class.getClassLoader(), new Class[]{ProxyInterface.class}, new HouseInvocationHandler(houseService));
+        MediumService mediumService = new MediumService(new House());
+        ProxyInterface result = (ProxyInterface) Proxy.newProxyInstance(HouseService.class.getClassLoader(), new Class[]{ProxyInterface.class}, new HouseInvocationHandler(mediumService));
+        ProxyInterface result1 = (ProxyInterface) Proxy.newProxyInstance(HouseService.class.getClassLoader(), new Class[]{ProxyInterface.class}, new HouseInvocationHandler(mediumService));
         House house2 = result.buyHouse(user);
         System.out.println(house2.toString());
     }

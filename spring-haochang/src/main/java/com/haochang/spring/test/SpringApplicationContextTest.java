@@ -21,9 +21,9 @@ public class SpringApplicationContextTest {
 //        annotationConfigApplicationContext.registerBean("user", User.class);
 
         //发布事件
-        annotationConfigApplicationContext.publishEvent(new OrderEvent("order", 1111L, "AAA", new User("aaa")));
+//        annotationConfigApplicationContext.publishEvent(new OrderEvent("order", 1111L, "AAA", new User("aaa")));
 
-        Object user = annotationConfigApplicationContext.getBean("person");
-        System.out.println(user);
+//        Object user = annotationConfigApplicationContext.getBean("person");
+//        System.out.println(user);
     }
 }
