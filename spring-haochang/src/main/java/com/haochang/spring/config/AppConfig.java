@@ -14,15 +14,11 @@ import org.springframework.context.annotation.*;
  * @date: 2020-10-12 16:07
  */
 @Configuration
-@ComponentScan(value = "com.haochang.spring")
-@MapperScan(basePackages = "com.haochang.spring.mapper")
-@ImportResource(value = "classpath:spring-mybatis-context.xml")
+@ComponentScan(value = "com.haochang.spring.service")
+//@MapperScan(basePackages = "com.haochang.spring.mapper")
+//@ImportResource(value = "classpath:spring-mybatis-context.xml")
 public class AppConfig {
 
-    @Bean
-    public UserService userService1(){
-        return new UserService();
-    }
     /**
      * 方法功能描述：注册事件监听
      * @MethodName: applicationListener

@@ -23,7 +23,7 @@ public class SpringApplicationContextTest {
         //发布事件
 //        annotationConfigApplicationContext.publishEvent(new OrderEvent("order", 1111L, "AAA", new User("aaa")));
 
-//        Object user = annotationConfigApplicationContext.getBean("person");
-//        System.out.println(user);
+        Object user = annotationConfigApplicationContext.getBean("cardService");
+        System.out.println(user);
     }
 }
