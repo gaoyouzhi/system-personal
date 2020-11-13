@@ -1,5 +1,6 @@
 package com.haochang.springcloud;
 
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
@@ -9,4 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 @SpringBootApplication
 public class HaoChangSpringCloudApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(HaoChangSpringCloudApplication.class, args);
+    }
 }
