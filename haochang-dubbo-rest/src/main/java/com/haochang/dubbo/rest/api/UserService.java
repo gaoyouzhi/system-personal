@@ -12,8 +12,8 @@ import javax.ws.rs.core.MediaType;
  * @date: 2020-11-25 11:14
  */
 @Path("user")
-@Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
-@Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
+@Consumes({MediaType.APPLICATION_JSON, MediaType.TEXT_XML})
+@Produces({MediaType.APPLICATION_JSON, MediaType.TEXT_XML})
 public interface UserService {
 
     @GET
