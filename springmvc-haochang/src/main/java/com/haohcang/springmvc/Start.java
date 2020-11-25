@@ -10,7 +10,7 @@ public class Start {
         Tomcat tomcat = new Tomcat();
         tomcat.setPort(8080);
 
-        tomcat.addWebapp("/", "classpath:");
+        tomcat.addWebapp("/", "E:\\gyz_git\\system-personal\\springmvc-haochang\\src\\main\\webapp");
 
         tomcat.start();
         tomcat.getServer().await();
