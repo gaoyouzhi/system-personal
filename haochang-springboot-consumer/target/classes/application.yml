@@ -1,42 +1,21 @@
 
-logging:
-    config: classpath:/logback-boot.xml
-
-server:
-  port: 8180
-
 spring:
-  cloud:
-    nacos:
-      discovery:
-        server-addr: 10.108.2.126:8848
-
-dubbo:
-# 定义两个协议 dubbo，rest（使用jetty作为服务器）
-  protocols:
-    dubbo:
-      name: dubbo
-      port: 20880
-    rest:
-      name: rest
-      port: 9999
-      server: jetty
-# 定义两个注册中心 这里偷了个懒 都是使用nacos
-  registries:
-    nacos1:
-      registry:
-        address: nacos://10.108.2.126:8848
-        id: nacos1
-# 必须要绑定协议
-        protocol: dubbo
-    nacos2:
-      registry:
-        address: nacos://10.108.2.126:8848
-        id: nacos2
-        protocol: rest
   application:
-# 服务提供方名称，必须要提供 否则会报错
-    name: dubbo-consumer
+    name: dubbo-rest-consumer
+dubbo:
+  protocol:
+    name: dubbo
+    serialization: kryo
+    port: 20980
   registry:
-    address: nacos://10.108.2.126:8848
-    register: false  # 表示不把自己注册上去,只注册服务
+    address: nacos://10.108.2.126:8848 # 自己的nacos地址
+    check: false
+    group: noncore
+    version: 1.0
+    protocol: nacos
+    parameters:
+      namespace: dev
+  consumer:
+    group: noncore
+    check: false
+    version: 1.0

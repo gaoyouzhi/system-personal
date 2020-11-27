@@ -11,9 +11,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 @SpringBootApplication
 @DubboComponentScan(basePackages = "com.haochang.boot.impl")
-public class HaoChangBootApplication {
+//@EnableDiscoveryClient
+public class ProviderApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(HaoChangBootApplication.class, args);
+        SpringApplication.run(ProviderApplication.class, args);
     }
 }

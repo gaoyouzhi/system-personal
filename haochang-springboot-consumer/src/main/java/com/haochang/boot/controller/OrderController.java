@@ -3,10 +3,9 @@ package com.haochang.boot.controller;
 import com.haochang.api.OrderService;
 import com.haochang.model.Order;
 import org.apache.dubbo.config.annotation.DubboReference;
-import org.apache.dubbo.config.annotation.DubboService;
+import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -18,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("order")
 public class OrderController {
 
-    @DubboReference(protocol = "rest", version = "1.0")
+    @DubboReference
     private OrderService orderService;
 
     @RequestMapping("/id/{id}")

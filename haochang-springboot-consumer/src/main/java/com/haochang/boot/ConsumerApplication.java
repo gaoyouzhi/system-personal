@@ -9,9 +9,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @date: 2020-11-25 09:29
  */
 @SpringBootApplication
-public class HaoChangBootApplication {
+public class ConsumerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(HaoChangBootApplication.class, args);
+        SpringApplication.run(ConsumerApplication.class, args);
     }
 }
