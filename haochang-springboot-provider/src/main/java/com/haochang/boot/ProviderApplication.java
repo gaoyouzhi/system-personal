@@ -1,8 +1,8 @@
 package com.haochang.boot;
 
-import org.apache.dubbo.config.spring.context.annotation.DubboComponentScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
  * @description: 描述：boot项目
@@ -10,8 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @date: 2020-11-25 09:29
  */
 @SpringBootApplication
-@DubboComponentScan(basePackages = "com.haochang.boot.impl")
-//@EnableDiscoveryClient
+@EnableDiscoveryClient
 public class ProviderApplication {
 
     public static void main(String[] args) {

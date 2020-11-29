@@ -1,19 +1,23 @@
+dubbo:
+  scan:
+    base-packages: com.haochang.boot.impl
+  protocols:
+    dubbo:
+      name: dubbo
+      port: -1
+    rest:
+      name: rest
+      port: 8888
+      server: netty
+  registry:
+    address: spring-cloud://localhost
+
 spring:
   application:
     name: dubbo-rest-provider
-dubbo:
-  protocol:
-    name: dubbo
-    serialization: kryo
-    port: 20980
-  registry:
-    address: nacos://10.108.2.126:8848 # 自己的nacos地址
-    check: false
-    group: noncore
-    version: 1.0
-    protocol: nacos
-    parameters:
-      namespace: dev
-  provider:
-    version: 1.0
-    group: noncore
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  main:
+    allow-bean-definition-overriding: true

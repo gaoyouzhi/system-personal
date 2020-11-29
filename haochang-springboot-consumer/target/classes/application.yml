@@ -1,21 +1,24 @@
+server:
+  port: 8082
+  compression:
+    enabled: true
+    mime-types: application/json,application/xml,text/html,text/xml,text/plain
+dubbo:
+  registry:
+    address: spring-cloud://localhost
+  cloud:
+    # The subscribed services in consumer side
+    subscribed-services: dubbo-rest-provider
 
 spring:
+  http:
+    encoding:
+      charset: UTF-8
   application:
     name: dubbo-rest-consumer
-dubbo:
-  protocol:
-    name: dubbo
-    serialization: kryo
-    port: 20980
-  registry:
-    address: nacos://10.108.2.126:8848 # 自己的nacos地址
-    check: false
-    group: noncore
-    version: 1.0
-    protocol: nacos
-    parameters:
-      namespace: dev
-  consumer:
-    group: noncore
-    check: false
-    version: 1.0
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  main:
+    allow-bean-definition-overriding: true
