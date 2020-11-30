@@ -3,6 +3,8 @@ package com.haochang.api;
 
 import com.haochang.model.Order;
 
+import java.util.List;
+
 /**
  * @description: 描述：订单service
  * @author: youzhi.gao
@@ -11,5 +13,7 @@ import com.haochang.model.Order;
 public interface OrderService {
 
     Order getOrderById(Long Id);
+
+    List<Order> getOrderByUserId(Long userId);
 
 }

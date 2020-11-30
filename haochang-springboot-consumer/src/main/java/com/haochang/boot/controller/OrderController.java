@@ -1,5 +1,6 @@
 package com.haochang.boot.controller;
 
+import com.alibaba.fastjson.JSONObject;
 import com.haochang.api.OrderService;
 import com.haochang.model.Order;
 import org.apache.dubbo.config.annotation.Reference;
@@ -8,6 +9,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
+
+import java.util.List;
 
 /**
  * @description: 描述：订单controller
@@ -18,17 +21,21 @@ import org.springframework.web.client.RestTemplate;
 @RequestMapping("orders")
 public class OrderController {
 
-    @Reference
+    @Reference(protocol = "dubbo")
     private OrderService orderService;
 
     @Autowired
     private RestTemplate restTemplate;
 
-    @RequestMapping("/{id}")
+    @RequestMapping("/id/{id}")
     public Order getOrderById(@PathVariable("id") Long id){
         return orderService.getOrderById(id);
     }
 
+    @RequestMapping("/userId/{userId}")
+    public List<Order> getOrderByUserId(@PathVariable("userId") Long id){
+        return orderService.getOrderByUserId(id);
+    }
 
     @RequestMapping("/rest/{id}")
     public String getRestOrderById(@PathVariable("id") Long id) {
