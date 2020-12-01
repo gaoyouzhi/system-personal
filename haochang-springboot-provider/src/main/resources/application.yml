@@ -1,3 +1,4 @@
+
 dubbo:
   scan:
     base-packages: com.haochang.boot.impl
