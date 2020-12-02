@@ -1,0 +1,2 @@
+# Initializers
+org.springframework.context.ApplicationContextInitializer=com.haochang.boot.listener.CommandLinePropertyListener
