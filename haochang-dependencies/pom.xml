@@ -43,6 +43,7 @@
             <scope>test</scope>
         </dependency>
 
+
         <!--服务注册与发现-->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
