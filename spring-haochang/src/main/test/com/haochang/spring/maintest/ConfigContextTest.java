@@ -1,4 +1,4 @@
-package com.haochang.spring.test;
+package com.haochang.spring.maintest;
 
 
 import com.haochang.spring.config.AppConfig;

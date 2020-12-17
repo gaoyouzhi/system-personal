@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 @Mapper
 public interface BaseMapper {
-	@Select({"select id from sys_resource where id = 1"})
-	public Long get() throws Exception;
+	@Select({"select stock from t_product where id = 26"})
+	public Long getStock() throws Exception;
 }

@@ -1,14 +1,10 @@
-package com.haochang.spring.test;
+package com.haochang.spring.maintest;
 
 
 import com.haochang.spring.config.AppConfig;
-import com.haochang.spring.model.OrderEvent;
-import com.haochang.spring.model.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-
-import java.util.EventListener;
 
 /**
  * @description: 描述：测试applicationContext

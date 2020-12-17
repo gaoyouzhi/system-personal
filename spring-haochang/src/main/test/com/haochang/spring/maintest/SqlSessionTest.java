@@ -1,4 +1,4 @@
-package com.haochang.spring.test;
+package com.haochang.spring.maintest;
 
 import com.haochang.spring.config.AppConfig;
 import com.haochang.spring.mapper.BaseMapper;
@@ -19,7 +19,7 @@ public class SqlSessionTest {
         SqlSessionFactory sqlSessionFactory = (SqlSessionFactory) annotationConfigApplicationContext.getBean("sqlSessionFactory");
         SqlSession session = sqlSessionFactory.openSession();
         BaseMapper mapper = session.getMapper(BaseMapper.class);
-        Long aLong = mapper.get();
+        Long aLong = mapper.getStock();
         System.out.println(aLong);
     }
 }

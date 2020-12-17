@@ -1,4 +1,4 @@
-package com.haochang.spring.test;
+package com.haochang.spring.maintest;
 
 import com.haochang.spring.mapper.BaseMapper;
 import org.apache.commons.codec.Resources;
@@ -14,7 +14,11 @@ public class MybatisMain {
         SqlSessionFactory sqlsessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
         SqlSession sqlSession = sqlsessionFactory.openSession();
         BaseMapper mapper = sqlSession.getMapper(BaseMapper.class);
-        System.out.println(mapper.get());
+        System.out.println("查询库存 === " + mapper.getStock());
+        System.out.println("查询库存 === " + mapper.getStock());
+        sqlSession.commit();
+        System.out.println("查询库存 2222=== " + mapper.getStock());
+
         sqlSession.close();
     }
 }

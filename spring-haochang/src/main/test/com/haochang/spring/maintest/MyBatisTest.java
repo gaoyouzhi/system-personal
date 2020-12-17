@@ -1,4 +1,4 @@
-package com.haochang.spring.test;
+package com.haochang.spring.maintest;
 
 import com.haochang.spring.mapper.BaseMapper;
 import org.apache.ibatis.session.SqlSession;
@@ -17,7 +17,7 @@ public class MyBatisTest {
         SqlSessionFactory sqlSessionFactory = configApplicationContext.getBean("sqlSessionFactory", SqlSessionFactory.class);
         SqlSession session = sqlSessionFactory.openSession();
         BaseMapper mapper = session.getMapper(BaseMapper.class);
-        System.out.println(mapper.get());
+        System.out.println(mapper.getStock());
         session.close();
     }
 }
