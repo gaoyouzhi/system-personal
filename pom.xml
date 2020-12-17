@@ -17,6 +17,9 @@
         <module>encryption-demo</module>
         <module>springcloud-haochang</module>
         <module>haochang-rocketmq</module>
+        <module>haochang-spring</module>
+        <module>springboot-haochang</module>
+        <module>haochang-dubbo-rest</module>
     </modules>
 
     <parent>
