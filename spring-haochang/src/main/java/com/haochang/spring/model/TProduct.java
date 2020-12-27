@@ -1,8 +1,11 @@
 package com.haochang.spring.model;
 
+import org.apache.log4j.xml.SAXErrorHandler;
+
+import java.io.Serializable;
 import java.math.BigDecimal;
 
-public class TProduct {
+public class TProduct implements Serializable {
     private Long id;
 
     private String name;

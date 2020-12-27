@@ -7,8 +7,6 @@ import org.apache.ibatis.annotations.*;
 import org.apache.ibatis.type.JdbcType;
 import org.springframework.stereotype.Repository;
 
-@Repository
-@Mapper
 public interface TProductMapper {
     @Delete({
         "delete from t_product",
