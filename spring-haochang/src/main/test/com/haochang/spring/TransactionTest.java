@@ -7,6 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.Date;
+
+
 /**
  * @description: 描述：测试事务
  * @author: youzhi.gao
@@ -22,6 +25,7 @@ public class TransactionTest {
     @Test
     public void update(){
         productService.selectByPrimaryKey(1L);
+        Date date = new Date();
     }
 
 
