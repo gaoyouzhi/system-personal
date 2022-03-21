@@ -16,7 +16,7 @@
 
 
     <properties>
-        <dubbo.version>2.6.5</dubbo.version>
+        <dubbo.version>2.6.9</dubbo.version>
         <maven.compiler.version>3.8.0</maven.compiler.version>
         <source.level>1.8</source.level>
         <target.level>1.8</target.level>
